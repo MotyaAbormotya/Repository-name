@@ -14,19 +14,6 @@ namespace _2
             int[] arrayRandom = new int[width];
             int[] tempArray = new int[width];
             Random random = new Random();
-
-            RandomArray();
-
-            Console.ReadKey();
-        }
-
-        public static void RandomArray()
-        {
-
-            int width = 5;
-            int[] arrayRandom = new int[width];
-            int[] tempArray = new int[width];
-            Random random = new Random();
             for (int i = 0; i < arrayRandom.Length; i++)
             {
                 arrayRandom[i] = random.Next(1, 100 + 1);
@@ -62,6 +49,12 @@ namespace _2
             {
                 Console.Write(arrayRandom[i] + " ");
             }
+            Console.ReadKey();
+        }
+
+        public static void RandomArray()
+        {
+
         }
     }
 }
