@@ -10,9 +10,15 @@ namespace _3
     {
         static void Main(string[] args)
         {
+            HealthBar();
+            Console.ReadKey();
+        }
+
+        public static void HealthBar()
+        {
+            Random random = new Random();
             int[] healthBar = new int[10];
             int health = 0;
-            Random random = new Random();
             Console.Write('[');
             for (int i = 0; i < healthBar.Length; i++)
             {
@@ -23,12 +29,12 @@ namespace _3
             for (int i = 0; i < health; i++)
             {
                 Console.Write('%');
-               
+
             }
             for (int i = 0; i < healthBar.Length; i++)
             {
-                if(healthBar[i] == 0)
-                Console.Write('_');
+                if (healthBar[i] == 0)
+                    Console.Write('_');
             }
             Console.Write(']');
             Console.WriteLine();
@@ -36,7 +42,6 @@ namespace _3
             {
                 Console.Write(healthBar[i] + " ");
             }
-            Console.ReadKey();
         }
     }
 }
